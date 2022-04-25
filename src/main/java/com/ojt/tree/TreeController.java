@@ -21,21 +21,17 @@ public class TreeController {
   public String index(Model model) {
     List<Tree> tree = TreeMapper.getList();
 
-    List<String> deptcd = new ArrayList<String>();
-    List<String> deptname = new ArrayList<String>();
-    List<String> parentdeptCd = new ArrayList<String>();
-    List<String> depth = new ArrayList<String>();
+    List<Integer> tree_id = new ArrayList<Integer>();
+    List<Integer> parent_tree_id = new ArrayList<Integer>();
+    List<String> tree_nm = new ArrayList<String>();
     for (int i = 0; i < tree.size(); i++) {
-      deptcd.add(tree.get(i).getDeptcd());
-      deptname.add(tree.get(i).getDeptname());
-      parentdeptCd.add(tree.get(i).getParentdeptCd());
-      depth.add(tree.get(i).getDepth());
+      tree_id.add(tree.get(i).getTree_id());
+      parent_tree_id.add(tree.get(i).getParent_tree_id());
+      tree_nm.add(tree.get(i).getTree_nm());
     }
-    model.addAttribute("deptcd", deptcd);
-    model.addAttribute("deptname", deptname);
-    model.addAttribute("parentdeptCd", parentdeptCd);
-    model.addAttribute("depth", depth);
-
+    model.addAttribute("tree_id", tree_id);
+    model.addAttribute("parent_tree_id", parent_tree_id);
+    model.addAttribute("tree_nm", tree_nm);
     model.addAttribute("tree", tree);
     model.addAttribute("treeSize", tree.size());
 

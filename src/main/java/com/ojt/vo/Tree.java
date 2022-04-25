@@ -1,47 +1,37 @@
 package com.ojt.vo;
 
 public class Tree {
-  String deptcd;
-  String deptname;
-  String parentdeptCd;
-  String depth;
+  int tree_id;
+  int parent_tree_id;
+  String tree_nm;
 
-  public String getDeptcd() {
-    return deptcd;
+  public int getTree_id() {
+    return tree_id;
   }
 
-  public void setDeptcd(String deptcd) {
-    this.deptcd = deptcd;
+  public void setTree_id(int tree_id) {
+    this.tree_id = tree_id;
   }
 
-  public String getDeptname() {
-    return deptname;
+  public int getParent_tree_id() {
+    return parent_tree_id;
   }
 
-  public void setDeptname(String deptname) {
-    this.deptname = deptname;
+  public void setParent_tree_id(int parent_tree_id) {
+    this.parent_tree_id = parent_tree_id;
   }
 
-  public String getParentdeptCd() {
-    return parentdeptCd;
+  public String getTree_nm() {
+    return tree_nm;
   }
 
-  public void setParentdeptCd(String parentdeptCd) {
-    this.parentdeptCd = parentdeptCd;
-  }
-
-  public String getDepth() {
-    return depth;
-  }
-
-  public void setDepth(String depth) {
-    this.depth = depth;
+  public void setTree_nm(String tree_nm) {
+    this.tree_nm = tree_nm;
   }
 
   @Override
   public String toString() {
-    return "Tree [deptcd=" + deptcd + ", deptname=" + deptname + ", parentdeptCd=" + parentdeptCd + ", depth=" + depth
-        + "]";
+    return "Tree [tree_id=" + tree_id + ", parent_tree_id=" + parent_tree_id + ", tree_nm=" + tree_nm + "]";
   }
 
 }

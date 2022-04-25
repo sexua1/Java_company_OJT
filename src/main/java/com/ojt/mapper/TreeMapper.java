@@ -7,6 +7,6 @@ import org.apache.ibatis.annotations.Select;
 import com.ojt.vo.Tree;
 
 public interface TreeMapper {
-  @Select("select * from COMPANY")
+  @Select("select * from t_tree_info")
   public List<Tree> getList();
 }
